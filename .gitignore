@@ -13,6 +13,9 @@
 /output/archive-without-alt_utils
 /generated.exs
 /input/1-discoveredmodels
+/input/1-discoveredmodels.zip
 /input/3-executions-per-miner
 /input/3-executions-per-miner.zip
 **/cate_trees/
+/PIPELINE_EXPLANATION.md
+/ASSUMPTIONS.md
