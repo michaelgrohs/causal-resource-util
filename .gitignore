@@ -1,0 +1,18 @@
+/archive
+/comparison
+/.claude
+/.venv
+/helper.ipynb
+/saved.py
+/simulation_executions.py
+/slpn.py
+/pipeline_with_alt_utils.ipynb
+/input/archive
+/output/archive
+/output/archive-before fix
+/output/archive-without-alt_utils
+/generated.exs
+/input/1-discoveredmodels
+/input/3-executions-per-miner
+/input/3-executions-per-miner.zip
+**/cate_trees/
