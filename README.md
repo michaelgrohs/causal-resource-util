@@ -65,7 +65,7 @@ Five process discovery algorithms are compared as miners:
 
 > **⚠ The enriched multi-run and discovered model files (`input/`) are too large for this repository.**
 >
-> Download them from: **[PLACEHOLDER — external link to be added]**
+> Download them from: https://figshare.com/s/0b988968c58a48fd7794
 >
 > Extract the archive so that the folder structure matches:
 > ```
@@ -89,11 +89,6 @@ The following public event logs from the [4TU Research Data repository](https://
 | BPI Challenge 2013 — Open problems | `BPI_Challenge_2013_open_problems` |
 | BPIC 2012-a | `bpic12-a` |
 | BPIC 2018 Parcel document | `bpic18 Parcel document` |
-| CoSeLoG WABO 1–5 | `CoSeLoG WABO {1..5}` |
-| Hospital log | `Hospital_log` |
-| Road Traffic Fine Management | `Road_Traffic_Fine_Management_Process` |
-| Sepsis | `Sepsis` |
-| BPIC 2020 (Domestic / International / Prepaid / RequestForPayment) | `bpic2020-*` |
 
 ---
 
@@ -150,14 +145,3 @@ Key package versions used during development:
 | `output/{miner}/{dataset}/` | Full causal analysis report (Excel + PDF) per dataset |
 
 ---
-
-## .exs file format
-
-`.exs` files are JSON produced by replaying a Petri net against an event log. Each entry in `"executions"` records one transition firing: which transition fired, what other transitions were simultaneously enabled, and the resource utilisation values at the moment of the choice.
-
-Two formats exist (auto-detected by the parser in `pipeline_per_miner.ipynb`):
-
-- **Old format** — single `resource_utilisation` scalar per firing
-- **New format (alt-util)** — per-transition utilisation: `resource_utilisation_fired_transition` + `other_enabled_transitions_resource_utilisation`
-
-The new format enables the full confounder set used in causal analysis.
