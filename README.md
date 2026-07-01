@@ -1,6 +1,6 @@
 # Causal Analysis of the Impact of Resource Utilisation on Decisions in a Process
 
-This repository contains the code and results for the manuscript "TBD" submitted to Information Systems. 
+This repository contains the code and results for the manuscript "The Effects of Resource Utilisation on Decisions in Processes" submitted to Information Systems. 
 The core question is whether the resource utilisation at a choice point in a process model has a causal effect on which path is taken.
 
 ---
@@ -17,7 +17,6 @@ Five process discovery algorithms are compared as miners:
 | Flower model                 | `flw-miner` |
 | Inductive Miner              | `im-miner`  | 
 | Inductive Miner infrequent   | `imf-miner` | 
-| Split Miner                  | `spl-miner` | 
 
 ---
 
@@ -33,7 +32,6 @@ Five process discovery algorithms are compared as miners:
 │
 ├── confounders.xlsx            # Number of confounders (base / resource / alt-util) per dataset × miner
 ├── correlations.csv            # Saved pairwise Pearson correlation matrix
-├── generated.exs               # Minimal synthetic .exs file for development / unit testing
 │
 ├── input/                      # ⚠ NOT in git — see "Input data" below
 │   ├── 1-discoveredmodels/     # Discovered process models (.dfg, .ptree) + SVG visualisations
@@ -42,20 +40,18 @@ Five process discovery algorithms are compared as miners:
 │       ├── dfg-miner/          #   .exs execution replay files + .exs.time (computation time)
 │       ├── flw-miner/
 │       ├── im-miner/
-│       ├── imf-miner/
-│       └── spl-miner/
+│       └── imf-miner/
 │
 └── output/
     ├── feasibility_study.csv   # Per-dataset timing + descriptive statistics summary
-    ├── compute_times.xlsx      # All .exs.time values across all input folders
     ├── correlation_matrix.pdf  # Heatmap: size metrics vs. computation times
-    ├── util_dist_overall.pdf   # Resource utilisation distribution — feasible logs, all miners
+    ├── util_dist_overall.pdf   # Resource utilisation distribution —all miners
+    ├── util_dist_overall_diff.pdf   # Resource utilisation distribution difference — all miners
     ├── util_dist_bpic17o_dfg.pdf  # Distribution for BPI 2017 Offer log, DFG miner
     ├── dfg-miner/              # Per-dataset causal analysis reports (Excel + PDF)
     ├── flw-miner/
     ├── im-miner/
-    ├── imf-miner/
-    └── spl-miner/
+    └── imf-miner/
 ```
 
 
@@ -72,6 +68,7 @@ Five process discovery algorithms are compared as miners:
 > input/3-executions-per-miner/dfg-miner/*.exs
 > input/3-executions-per-miner/flw-miner/*.exs
 > input/3-executions-per-miner/im-miner/*.exs
+> ...
 > ```
 > Each `.exs` file has a companion `.exs.time` file recording how long the replay took.
 
