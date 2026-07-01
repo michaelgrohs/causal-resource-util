@@ -9,7 +9,7 @@ The core question is whether the resource utilisation at a choice point in a pro
 
 The pipeline takes an enriched multi-run as input, and then runs causal machine learning (Double ML + Causal Forest) to test whether utilisation is a significant driver of routing choices.
 
-Five process discovery algorithms are compared as miners:
+Four process discovery algorithms are compared as miners:
 
 | Miner                        | ID          |
 |------------------------------|-------------|
