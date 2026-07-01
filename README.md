@@ -1,6 +1,6 @@
 # Causal Analysis of the Impact of Resource Utilisation on Decisions in a Process
 
-This repository contains the code and results for the manuscript "The Effects of Resource Utilisation on Decisions in Processes" submitted to Information Systems. 
+This repository contains the code and results for the manuscript "Estimating the Effects of Resource Utilisation on Decisions in Processes with Causal Machine Learning" submitted to Information Systems. 
 The core question is whether the resource utilisation at a choice point in a process model has a causal effect on which path is taken.
 
 ---
